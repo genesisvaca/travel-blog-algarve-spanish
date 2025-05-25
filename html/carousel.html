@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería - Pasaporte Nómada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/carousel.css" />
+  </head>
+  <body>
+    <header class="carousel-header">
+      <div class="carousel-header-container">
+        <h1 class="carousel-title">Galería del Algarve</h1>
+        <p class="carousel-subtitle">
+          Momentos capturados en el paraíso portugués
+        </p>
+      </div>
+    </header>
+
+    <main class="carousel-main">
+      <div class="container">
+        <div class="back-button-container">
+          <button
+            onclick="window.location.href='index.html'"
+            class="back-button"
+          >
+            <span class="back-icon">←</span>
+            Volver al inicio
+          </button>
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack"></div>
+            <button class="carousel-nav-btn carousel-prev" id="prevBtn">
+              <span>‹</span>
+            </button>
+            <button class="carousel-nav-btn carousel-next" id="nextBtn">
+              <span>›</span>
+            </button>
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+          </div>
+
+          <div class="image-info">
+            <h3 id="imageTitle">Título de la imagen</h3>
+            <p id="imageDescription">Descripción de la imagen</p>
+            <span class="image-counter">
+              <span id="currentIndex">1</span> / <span id="totalImages">1</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const imageData = {
+        'cabo-sao-vicente': {
+          title: 'Cabo de São Vicente',
+          images: [
+            {
+              src: '/media/img/Cabo_de_São_Vicente.JPG',
+              title: 'Vistas infinitas',
+              description:
+                'Acantilados escarpados bajo un cielo despejado al borde del continente.'
+            },
+            {
+              src: '/media/img/Cabo_de_São_Vicente_Sunset.JPG',
+              title: 'Puesta de sol mágica',
+              description:
+                'Un atardecer que pinta el mar de oro frente al faro histórico.'
+            },
+            {
+              src: '/media/img/Cabo_de_São_Vicente_Acantilado.jpg',
+              title: 'Acantilado vertical',
+              description:
+                'La fuerza del océano golpeando formaciones rocosas imponentes.'
+            },
+            {
+              src: '/media/img/Cabo_de_São_Vicente_Agua.JPG',
+              title: 'El oleaje y la roca',
+              description:
+                'El mar gira en espiral alrededor de una roca como si la abrazara.'
+            }
+          ]
+        },
+        faro: {
+          title: 'Faro',
+          images: [
+            {
+              src: '/media/img/Faro_Paseo_Maritimo.JPG',
+              title: 'Paseo marítimo de Faro',
+              description: 'Una caminata tranquila al borde de la Ría Formosa.'
+            },
+            {
+              src: '/media/img/Faro_Lancha.JPG',
+              title: 'Lancha en la ría',
+              description:
+                'El reflejo del cielo y el arte local en un barco peculiar.'
+            },
+            {
+              src: '/media/img/Faro_Perro.JPG',
+              title: 'Compañero de viaje en Faro',
+              description: 'Encuentros inesperados en la capital del Algarve.'
+            }
+          ]
+        },
+        tavira: {
+          title: 'Tavira',
+          images: [
+            {
+              src: '/media/img/Tavira_Río_Gilão_JArdim_do_Coreto.JPG',
+              title: 'Río Gilão',
+              description:
+                'Corazón de Tavira, perfecto para paseos al atardecer.'
+            },
+            {
+              src: '/media/img/DSC_0963.JPG',
+              title: 'Puente romano de Tavira',
+              description:
+                'Arquitectura tradicional portuguesa sobre aguas tranquilas.'
+            },
+            {
+              src: '/media/img/DSC_1183.JPG',
+              title: 'Paseo junto al río',
+              description:
+                'Palmeras, sol y tranquilidad en el centro histórico.'
+            }
+          ]
+        },
+        'ilha-do-farol': {
+          title: 'Ilha do Farol',
+          images: [
+            {
+              src: '/media/img/Ilha_do_Farol_da_Culatra.JPG',
+              title: 'La calma del océano',
+              description:
+                'Un amanecer brumoso con vista infinita al Atlántico.'
+            },
+            {
+              src: '/media/img/Ilha_do_Farol_da_Culatra_Gaviota.JPG',
+              title: 'Mirada salvaje',
+              description:
+                'Instante íntimo con una gaviota en la playa ventosa de la isla.'
+            },
+            {
+              src: '/media/img/Ilha_do_Farol_da_Culatra_Botes.JPG',
+              title: 'Aventura náutica',
+              description:
+                'Pequeños botes surcando las aguas cristalinas frente a la isla.'
+            },
+            {
+              src: '/media/img/Ilha_do_Farol_da_Culatra_Peces_Indicaciones.JPG',
+              title: 'Detalles isleños',
+              description:
+                'Carteles pintorescos que muestran la fauna marina de la zona.'
+            }
+          ]
+        },
+        olhao: {
+          title: 'Olhão',
+          images: [
+            {
+              src: '/media/img/Olhão_Portugal_Calle.JPG',
+              title: 'Calles soleadas',
+              description:
+                'Paseo marítimo de Olhão con su arquitectura urbana y encanto local.'
+            },
+            {
+              src: '/media/img/Olhão_Portugal_Mural.JPG',
+              title: 'Arte urbano',
+              description: 'Murales que reflejan el alma marina del pueblo.'
+            },
+            {
+              src: '/media/img/Olhão_Portugal_Estatua_Calvo.JPG',
+              title: 'Estatua singular',
+              description:
+                'Una escultura peculiar que decora las calles empedradas.'
+            },
+            {
+              src: '/media/img/Olhão_Portugal_Furgoneta_Fruta.jpg',
+              title: 'Frescura sobre ruedas',
+              description:
+                'Fruta fresca vendida desde una furgoneta entre callejones.'
+            }
+          ]
+        },
+        faro: {
+          title: 'Faro',
+          images: [
+            {
+              src: '/media/img/Faro_Paseo_Maritimo.JPG',
+              title: 'Paseo marítimo',
+              description:
+                'Faro ofrece un relajante paseo con vistas a la Ría Formosa.'
+            },
+            {
+              src: '/media/img/Faro_Ria_Formosa.JPG',
+              title: 'Tradición pesquera',
+              description:
+                'Un pescador revisa sus redes al amanecer entre barcas.'
+            },
+            {
+              src: '/media/img/Faro_Perro.JPG',
+              title: 'Descanso bajo sombra',
+              description:
+                'Un perro duerme plácidamente en un umbral de piedra.'
+            },
+            {
+              src: '/media/img/Faro_Lancha.JPG',
+              title: 'Surcando la laguna',
+              description:
+                'Lancha rápida cruzando las tranquilas aguas de Faro.'
+            }
+          ]
+        },
+        acantilados: {
+          title: 'Acantilados del Algarve',
+          images: [
+            {
+              src: '/media/img/Faro_Paseo_Maritimo.JPG',
+              title: 'Paseo marítimo',
+              description:
+                'Faro ofrece un relajante paseo con vistas a la Ría Formosa.'
+            },
+            {
+              src: '/media/img/Faro_Ria_Formosa.JPG',
+              title: 'Tradición pesquera',
+              description:
+                'Un pescador revisa sus redes al amanecer entre barcas.'
+            },
+            {
+              src: '/media/img/Faro_Perro.JPG',
+              title: 'Descanso bajo sombra',
+              description:
+                'Un perro duerme plácidamente en un umbral de piedra.'
+            },
+            {
+              src: '/media/img/Faro_Lancha.JPG',
+              title: 'Surcando la laguna',
+              description:
+                'Lancha rápida cruzando las tranquilas aguas de Faro.'
+            }
+          ]
+        }
+      }
+
+      let currentImageSet = []
+      let currentIndex = 0
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search)
+        const gallery = urlParams.get('gallery')
+        if (gallery && imageData[gallery]) {
+          loadImageSet(gallery)
+        } else {
+          loadImageSet('cabo-sao-vicente')
+        }
+      })
+
+      function loadImageSet(galleryKey) {
+        const data = imageData[galleryKey]
+        currentImageSet = data.images
+        currentIndex = 0
+        document.querySelector('.carousel-title').textContent = data.title
+        createSlides()
+        createIndicators()
+        updateCarousel()
+      }
+
+      function createSlides() {
+        const track = document.getElementById('carouselTrack')
+        track.innerHTML = ''
+        currentImageSet.forEach((image, index) => {
+          const slide = document.createElement('div')
+          slide.className = 'carousel-slide'
+          slide.innerHTML = `<div class="image-container"><img src="${image.src}" alt="${image.title}" loading="lazy"></div>`
+          track.appendChild(slide)
+        })
+      }
+
+      function createIndicators() {
+        const indicators = document.getElementById('carouselIndicators')
+        indicators.innerHTML = ''
+        currentImageSet.forEach((_, index) => {
+          const indicator = document.createElement('button')
+          indicator.className = 'carousel-indicator'
+          indicator.addEventListener('click', () => goToSlide(index))
+          indicators.appendChild(indicator)
+        })
+      }
+
+      function updateCarousel() {
+        const track = document.getElementById('carouselTrack')
+        const indicators = document.querySelectorAll('.carousel-indicator')
+        track.style.transform = `translateX(-${currentIndex * 100}%)`
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentIndex)
+        })
+        const currentImage = currentImageSet[currentIndex]
+        document.getElementById('imageTitle').textContent = currentImage.title
+        document.getElementById('imageDescription').textContent =
+          currentImage.description
+        document.getElementById('currentIndex').textContent = currentIndex + 1
+        document.getElementById('totalImages').textContent =
+          currentImageSet.length
+      }
+
+      function goToSlide(index) {
+        currentIndex = index
+        updateCarousel()
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % currentImageSet.length
+        updateCarousel()
+      }
+
+      function prevSlide() {
+        currentIndex =
+          (currentIndex - 1 + currentImageSet.length) % currentImageSet.length
+        updateCarousel()
+      }
+
+      document.getElementById('nextBtn').addEventListener('click', nextSlide)
+      document.getElementById('prevBtn').addEventListener('click', prevSlide)
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') prevSlide()
+        if (e.key === 'ArrowRight') nextSlide()
+        if (e.key === 'Escape') window.location.href = 'index.html'
+      })
+    </script>
+  </body>
+</html>

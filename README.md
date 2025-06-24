@@ -1,6 +1,6 @@
 # Pasaporte Nómada: Descubriendo el Algarve Portugués 🌍🏝️
 
-[[Preview of the Travel Blog](preview.png)](https://genesisvaca.github.io/travel-blog-algarve-spanish/preview)
+[Preview of the Travel Blog](https://genesisvaca.github.io/travel-blog-algarve-spanish/preview)
 
 Bienvenido al repositorio del proyecto **"Pasaporte Nómada - Descubriendo el Algarve"**, un blog de viajes interactivo y visualmente atractivo desarrollado en HTML, CSS y JavaScript. Este proyecto está completamente en español y tiene como objetivo inspirar a otros viajeros a conocer una de las regiones más bellas del sur de Europa: **el Algarve portugués**.
 

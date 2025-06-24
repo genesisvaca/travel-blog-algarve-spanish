@@ -1,70 +1,64 @@
-# Pasaporte Nómada: Descubriendo el Algarve Portugués 🌍🏝️
+# Pasaporte Nómada: Discovering the Portuguese Algarve 🌍🏝️
 
 [Preview of the Travel Blog](https://github.com/genesisvaca/travel-blog-algarve-spanish/tree/main/preview)
 
-Bienvenido al repositorio del proyecto **"Pasaporte Nómada - Descubriendo el Algarve"**, un blog de viajes interactivo y visualmente atractivo desarrollado en HTML, CSS y JavaScript. Este proyecto está completamente en español y tiene como objetivo inspirar a otros viajeros a conocer una de las regiones más bellas del sur de Europa: **el Algarve portugués**.
+Welcome to the repository for **"Pasaporte Nómada – Discovering the Algarve"**, an interactive and visually engaging travel blog built with HTML, CSS, and JavaScript. This project is entirely in Spanish and aims to inspire others to explore one of the most beautiful regions in southern Europe: the **Algarve in Portugal**.
 
-## 🌟 Características principales
+## 🌟 Key Features
 
-* Sitio web estático sin backend.
-* Interfaz moderna con diseño **neomórfico**.
-* Secciones interactivas:
+* Static website (no backend required)
+* Modern interface with **neumorphic** design
+* Interactive sections:
+  * Welcome and trip introduction
+  * Top 5 must-see spots in the Algarve
+  * Practical travel tips
+  * Image gallery with a location-based carousel
+  * Responsive design for mobile and tablet devices
+* Smooth navigation and soft animations
 
-  * Bienvenida y presentación del viaje.
-  * Top 5 lugares imperdibles del Algarve.
-  * Consejos prácticos de viajera.
-  * Galería con carrusel de imágenes por zonas turísticas.
-  * Formato responsivo para móviles y tabletas.
-* Navegación fluida y animaciones suaves.
+## 🎓 Technologies Used
 
-## 🎓 Tecnologías utilizadas
+* HTML5  
+* CSS3 (with variables and custom effects)  
+* JavaScript (DOM manipulation and URL navigation)
 
-* HTML5
-* CSS3 (con variables y efectos personalizados)
-* JavaScript (DOM + navegación por URL)
+## 📦 Local Installation
 
-## 📦 Instalación local
+1. Clone this repository:
 
-1. Clona este repositorio:
-
-   ```bash
+   ```
    git clone https://github.com/genesisvaca/travel-blog-algarve-spanish.git
    ```
-2. Navega a la carpeta del proyecto:
+2. Navigate to the project folder:
 
-   ```bash
-   cd travel-blog-algarve-spanish
-   ```
-3. Abre `index.html` directamente en tu navegador favorito o usa una extensión como **Live Server** para visualizarlo con recarga en vivo.
+```
+cd travel-blog-algarve-spanish
+```
 
-## 🗳þ Estructura del proyecto
+3. Open index.html directly in your browser or use a tool like Live Server to enable live reloading.
 
+## 🗳️ Project Structure
 ```
 travel-blog-algarve-spanish/
 ├── css/
-│   ├── styles.css            # Estilo principal
-│   └── carousel.css          # Estilo para el carrusel
+│   ├── styles.css           # Main styles
+│   └── carousel.css         # Carousel-specific styles
 ├── media/
-│   └── img/                  # Imágenes utilizadas
+│   └── img/                 # Images used in the project
 ├── src/
-│   └── main.tsx             # Script módulo (si se usa en ampliaciones)
-├── index.html               # Página principal del blog
-├── carousel.html            # Carrusel de galería
-└── README.md                # Este archivo
-```
+│   └── main.tsx            # Optional script module
+├── index.html              # Main blog page
+├── carousel.html           # Gallery carousel
+└── README.md               # This file
+````
 
-## ✉️ Contacto
+## ✉️ Contact
+If you enjoyed this project or have any questions:
 
-Si te gustó este proyecto o tienes alguna pregunta:
+Author: Génesis Vaca
 
-* Autora: Génesis Vaca
-* Email: [genesisvacapalma@gmail.com](mailto:genesisvacapalma@gmail.com)
-
-## 💼 Licencia
-
-Este proyecto está bajo la licencia **MIT**. Eres libre de usarlo, modificarlo y adaptarlo con fines personales o educativos.
+Email: genesisvacapalma@gmail.com
 
 ---
-
-> "Explorando el mundo, una historia a la vez..."
-> — *Pasaporte Nómada*
+> “Exploring the world, one story at a time...”
+— Pasaporte Nómada

@@ -9,7 +9,7 @@
 </p>
 
 
-<p align="center"> <img src="media/preview/Index_Preview.png" alt="Preview of Pasaporte Nómada main page" width="85%"> <br> <em>✨ A pastel-toned, fully handcrafted travel blog capturing the magic of southern Portugal ✨</em> </p> <p align="center"> <a href="https://github.com/genesisvaca/travel-blog-algarve-spanish/tree/main/media/preview"> 🔗 View All Previews </a> </p>
+<p align="center"> <img src="media/preview/Index_Preview.png" alt="Preview of Pasaporte Nómada main page" width="1060"> <br> <em>✨ A pastel-toned, fully handcrafted travel blog capturing the magic of southern Portugal ✨</em> </p> <p align="center"> <a href="https://github.com/genesisvaca/travel-blog-algarve-spanish/tree/main/media/preview"> 🔗 View All Previews </a> </p>
 
 ### 💡 Overview
 
@@ -33,7 +33,30 @@ The blog is written in Spanish 🇪🇸 and invites readers to explore the **Alg
 - 📱 Fully responsive layout for all devices
 
 ## 🖼️ Visual Highlights
-<p align="center"> <img src="media/preview/header_Index.PNG" width="45%"> <img src="media/preview/Inicio_Index.PNG" width="45%"> </p> <p align="center"> <img src="media/preview/Lugares_index.PNG" width="45%"> <img src="media/preview/Consejos_Index.PNG" width="45%"> </p> <p align="center"> <img src="media/preview/Gallery_Index.PNG" width="45%"> <img src="media/preview/Footer_Index.PNG" width="45%"> </p> <p align="center"> <img src="media/preview/Galler_Preview.png" width="90%"> <br> <em>Each section blends narrative, color, and light for an immersive reading experience.</em> </p>
+
+<img src="media/preview/header_Index.PNG" width="1060">
+<table>
+  <tr>
+    <td align="center">
+      <img src="media/preview/Inicio_Index.PNG" width=530">
+    </td>
+    <td align="center">
+      <img src="media/preview/Lugares_index.PNG" width="530">
+    </td>
+  </tr>
+    <tr>
+    <td align="center">
+      <img src="media/preview/Consejos_Index.PNG" width="530">
+    </td>
+    <td align="center">
+      <img src="media/preview/Gallery_Index.PNG" width="530">
+    </td>
+  </tr>
+</table>
+<img src="media/preview/Footer_Index.PNG" width="1060"> 
+<img src="media/preview/Galler_Preview.png" width="1060">
+
+<em>Each section blends narrative, color, and light for an immersive reading experience.</em> 
 
 ## 🧰 Technologies Used
 
